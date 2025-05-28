@@ -1,0 +1,48 @@
+<h1 class="test">Welcome  {{title}}!</h1>
+<h2>Hello to Angular Demo </h2>
+
+
+<div class="container1">
+
+      <div class="contained">
+         <h4>{{h5}}</h4>
+         <h3 *ngIf="showTrue">{{stud.true}}</h3>
+         <h3 *ngIf="showFalse">{{stud.false}}</h3>
+         <button (click)="toggleShow()">Yes?</button>
+      </div>
+      <div *ngIf="hide" class = "contained" (pointerenter)="toggleHide()">
+         Enter here to disappear!
+      </div>     <!--CHeck code-->
+ 
+            <!--<button (click)="changeTitle()">Submit</button>   -->
+</div>
+
+
+<div class="contained">
+<p>{{count}}</p>
+<button (click)="countInc()">Increment counter!</button>
+</div>                                              
+
+
+<div class="contained">
+   <button (click)="checkFact1(8)"> Check Factorial!</button>
+   <div>{{facto}}</div>
+</div>
+
+
+
+<div class="container2" *ngFor = "let i of profiles">
+   {{i.Name}}
+   {{i.Age}}
+   {{i.City}}
+</div>
+
+
+<div *ngFor="let user of users"><pre>
+ Name:  {{user.fName}} {{user.lName}}
+  City: {{user.city}} 
+  Gender: {{user.gender}}
+
+
+</pre>
+</div>

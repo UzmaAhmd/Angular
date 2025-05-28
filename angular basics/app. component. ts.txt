@@ -1,0 +1,140 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+
+
+
+
+
+// write all code in this class
+export class AppComponent {
+
+  title = 'User';
+  checkSubmit=' not check';
+  h5 ='Are you new here?';
+  showTrue=true;
+  showFalse=false;
+  stud={'rno':'1', 'yr':'1' , 'true':'yes', 'false':'no'};
+
+  
+  
+  toggleVal='yes';               //why does this not work in place of stud.val??
+  count=0;
+  hide=true;
+  
+  fact=1;
+  n=0;
+  facto=1;
+
+
+changeTitle()
+{
+  if(this.checkSubmit == 'not check')
+    {
+      this.checkSubmit='check';
+      console.log("Changing title");        //why if part not executing?
+    }
+  else{
+    console.log("no change");
+    this.checkSubmit='not check';
+  }
+  }
+
+
+
+  toggleShow(){
+    this.showTrue=!this.showTrue
+  }
+
+
+
+  toggleHide(){
+    this.hide=!this.hide
+  }
+
+
+
+  constructor(){
+    setTimeout(()=>{
+      this.title="Uzma";
+    },3000)
+  }
+
+
+
+  countInc(){
+    this.count++ ;
+  }
+
+
+checkFact1(n:number){
+  this.facto=this.checkFact(n);
+
+}
+
+
+checkFact(n:number):any{
+        if (n === 0) { 
+            return 1; 
+        } 
+        else { 
+            return n * this.checkFact( n - 1 ); 
+        } 
+    
+    // console.log(this.checkFact(n));
+  }
+  
+  
+  // studentInfoList:studentInfo[]=[
+  //   {
+  //     id:1,
+  //     name:Abc,
+  //     year:1,
+  //     sec:a
+  //   },
+  //   {
+  //     id:1,
+  //     name:bac,
+  //     year:,
+  //     sec:b
+  //   },
+  //   {
+  //   id:1,
+  //     name:cba,
+  //     year:2,
+  //     sec:c
+  //   }
+  // ];
+  
+
+public stud1 = { Name:"tam", Age:20 , City: "Nagpur" };
+public stud2 = { Name:"sam", Age:25 , City: "Bhopal" };
+public stud3 = { Name:"ram", Age:30 , City: "Raipur"};
+public profiles = [this.stud1, this.stud2, this.stud3]
+
+
+
+
+public users = [
+  { fName: 'Uzma', lName: 'Ahmed', city:'Nagpur', gender:'F' },
+  { fName: 'Noush', lName: 'Parvez', city:'Raipur', gender: 'M' },
+  { fName: 'Faazil', lName: 'Parvez', city:'Bhopal', gender: 'M' },
+  { fName: 'Zaki', lName: 'Parvez', city:'Indore', gender: 'M' }
+];
+}
+
+
+
+
+
+
+
+
+
+
+ //appComponet closing

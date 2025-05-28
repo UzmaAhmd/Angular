@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+.test{
+    color: rgb(173, 93, 93);
+    
+}
+.container1{
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;;
+}
+.contained{
+    background-color: rgb(125, 125, 196);
+  border: 1px solid rgb(77, 16, 16);
+  padding: 20px;
+/* 
+  width: 50%;
+  float: left;*/
+  text-align: center;
+  padding: 20px; 
+  margin: 20px;
+}
+.container2{
+    background-color: brown;
+    color: cornsilk;
+    margin: 10px;
+    width: 150px;
+    height:110px;
+}
+/*.counterClass{
+    height: 100px;
+    width: 300px;
+    background-color: rgb(216, 191, 160);
+    margin-top:40px;
+}
+
+ .toggle{
+    height: 100px;
+    width: 300px;
+    background-color: rgb(97, 146, 78);
+} */

@@ -1,0 +1,91 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+
+
+
+
+
+// write all code in this class
+export class AppComponent {
+
+  title = 'User';
+  checkSubmit=' not check';
+  h5 ='Are you new here?';
+  show=true;
+  stud={'rno':'1', 'val':'Yes', 'yr':'1'}
+
+  
+  
+  toggleVal='yes';               //why does this not work in place of stud.val??
+  count=0;
+  hide=true;
+  
+  fact=1;
+  n=0;
+  facto=1;
+
+
+changeTitle()
+{
+  if(this.checkSubmit == 'not check')
+    {
+      this.checkSubmit='check';
+      console.log("Changing title");        //why if part not executing?
+    }
+  else{
+    console.log("no change");
+    this.checkSubmit='not check';
+  }
+  }
+
+
+
+  toggleShow(){
+    this.show=!this.show
+  }
+
+
+
+  toggleHide(){
+    this.hide=!this.hide
+  }
+
+
+
+  constructor(){
+    setTimeout(()=>{
+      this.title="Uzma";
+    },3000)
+  }
+
+
+
+  countInc(){
+    this.count++ ;
+  }
+
+
+checkFact1(n:number){
+  this.facto=this.checkFact(n);
+
+}
+
+
+checkFact(n:number):any{
+        if (n === 0) { 
+            return 1; 
+        } 
+        else { 
+            return n * this.checkFact( n - 1 ); 
+        } 
+    
+    // console.log(this.checkFact(n));
+  }                                        
+  
+} //appComponet closing
